@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Cricket Records Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
+</head>
+
+<body>
+    <div class="container my-2">
+        <h1>Cricket Records Management System</h1>
+        <hr>
+       
+         
+          
+          
+        <h1 th:text="${player.playerName} +' '+ ${player.lastName}"></h1>
+          
+          
+           
+        
+            <h3 th:text="${player.country}"></h3>
+          <br><br>
+
+        <form  th:object="${player}" method="POST">
+        
+      <h2>Personal Information</h2>
+       
+       <table border="1" class="table table-striped table-responsive-md">
+        
+         <tr>
+           <th  scope="row"> Name </th>
+           <td th:text="${player.playerName} +' '+ ${player.lastName}" > </td>
+         </tr>
+          
+          <tr>
+            <th  scope="row"> Age </th>
+            <td th:text="${player.playerAge}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Role </th>
+            <td th:text="${player.role}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> batting Style </th>
+            <td th:text="${player.playerBattingSytle}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Bowling Style </th>
+            <td th:text="${player.playerBowlingSytle}" > </td>
+          </tr>
+          
+      </table>    
+      
+           <h2>Batting Performance</h2>  
+      
+         <table border="1" class="table table-striped table-responsive-md">
+      
+           <tr>
+            <th  scope="row"> Innings </th>
+            <td th:text="${player.playerBattingInnings}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Runs </th>
+            <td th:text="${player.battingRuns}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Balls </th>
+            <td th:text="${player.battingBalls}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Highest </th>
+            <td th:text="${player.battingHighest}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Average </th>
+            <td th:text="${player.battingAverage}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Strike Rate </th>
+            <td th:text="${player.battingSR}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Not Out </th>
+            <td th:text="${player.battingNotOut}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Sixes </th>
+            <td th:text="${player.battingSixes}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Four </th>
+            <td th:text="${player.battingFours}" > </td>
+          </tr>
+          
+          
+           <tr>
+            <th  scope="row"> Fifties </th>
+            <td th:text="${player.batting50s}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Hundreds </th>
+            <td th:text="${player.batting100s}" > </td>
+          </tr>
+     </table>   
+     
+     
+     
+           <h2>Bowling Performance</h2>  
+      
+         <table border="1" class="table table-striped table-responsive-md">
+      
+           <tr>
+            <th  scope="row"> Innings </th>
+            <td th:text="${player.playerBowlingInnings}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Wickets </th>
+            <td th:text="${player.bowlingWickets}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Overs </th>
+            <td th:text="${player.bowlingOvers}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Runs </th>
+            <td th:text="${player.bowlingRuns}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Balls </th>
+            <td th:text="${player.bowlingBalls}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Economy </th>
+            <td th:text="${player.bowlingEconomy}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Average </th>
+            <td th:text="${player.bowlingAverage}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Strike Rate </th>
+            <td th:text="${player.bowlingSR}" > </td>
+          </tr>
+          
+           <tr>
+            <th  scope="row"> Maidens </th>
+            <td th:text="${player.bowlingMaidens}" > </td>
+          </tr>
+          
+          
+           <tr>
+            <th  scope="row"> BBI </th>
+         
+            <td th:text="${player.bowlingBBI} +'/'+ ${player.bowlingBBIRuns}" ></td>
+            
+          </tr>
+          
+           
+     </table> 
+     
+ 
+     
+         
+
+        <a th:href="@{/}"> Back to Player List</a>
+         </form>
+    </div>
+</body>
+
+</html>
+

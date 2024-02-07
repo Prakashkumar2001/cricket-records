@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Cricket Records Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
+</head>
+
+<body>
+    <div class="container my-2">
+        <h1>Cricket Records Management System</h1>
+        <hr>
+       
+         
+          
+          
+       
+
+        <form  th:object="${player}" method="POST">
+        
+ 
+      
+           <h2>Bowling Stats</h2>  
+      
+ <table border="1" class="table table-striped table-responsive-md">
+      
+             <tr>
+            <th  scope="row"> Most Wickets </th>
+            <td><a th:href="@{/MostWickets}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+            <tr>
+            <th  scope="row"> Best Bowling Average </th>
+            <td><a th:href="@{/BestBowlingAverage}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+            
+            <tr>
+            <th  scope="row"> Best Bowling  </th>
+            <td><a th:href="@{/BestBowling}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+             <tr>
+            <th  scope="row"> Best Economy </th>
+            <td><a th:href="@{/BestEconomy}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+            <tr>
+            <th  scope="row"> Best Bowling Strike Rate </th>
+            <td><a th:href="@{/BestBowlingStrikeRate}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+         
+     </table>   
+     
+
+        <a th:href="@{/}"> Back to Player List</a>
+         </form>
+    </div>
+</body>
+
+</html>
+
+

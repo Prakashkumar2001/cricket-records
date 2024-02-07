@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Cricket Records Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
+</head>
+
+<body>
+    <div class="container my-2">
+        <h1>Cricket Records Management System</h1>
+        <hr>
+       
+         
+          
+          
+       
+
+        <form  th:object="${player}" method="POST">
+        
+ 
+      
+           <h2>Batting Stats</h2>  
+      
+ <table border="1" class="table table-striped table-responsive-md">
+      
+           <tr>
+            <th  scope="row"> Most Run </th>
+            <td><a th:href="@{/mostrun}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+            <tr>
+            <th  scope="row"> Highest Scores </th>
+            <td><a th:href="@{/HighestScores}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+            
+            <tr>
+            <th  scope="row"> Best Batting Average </th>
+            <td><a th:href="@{/BestBattingAverage}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+             <tr>
+            <th  scope="row"> Best Batting Strike Rate </th>
+            <td><a th:href="@{/BestBattingStrikeRate}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+            <tr>
+            <th  scope="row"> Most Hundreds </th>
+            <td><a th:href="@{/MostHundreds}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+            
+            <tr>
+            <th  scope="row"> Most Fifties </th>
+            <td><a th:href="@{/MostFifties}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+            
+            <tr>
+            <th  scope="row"> Most Fours </th>
+            <td><a th:href="@{/MostFours}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+             <tr>
+            <th  scope="row"> Most Sixes </th>
+            <td><a th:href="@{/MostSixes}" class="btn btn-warning btn-sm mb-3">View</a></td>
+            </tr>
+            
+               </table>   
+     
+ 
+        <a th:href="@{/}"> Back to Player List</a>
+         </form>
+    </div>
+</body>
+
+</html>
+

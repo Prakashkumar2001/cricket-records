@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Cricket Records Management System</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+</head>
+
+<body>
+
+ <div class="container my-2">
+    <h1>Cricket Records Management System</h1>
+     <br>
+            <a th:href="@{/bowlingStat}" class="btn btn-primary btn-sm mb-3">Back</a>
+    
+    
+      <h3>Bowling Performance</h3>
+       <h3>Best Bowling Strike Rate</h3>
+      
+           
+        <table border="1" class="table table-striped table-responsive-md">
+       
+
+    
+
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                     <th>Age</th>
+                    <th>Country</th>
+                    <th>Role</th>
+                    
+                    <th>Bowling Style</th>
+                    <th>Innings</th>
+                    <th>Wickets</th>
+                  
+                    
+                     <th>Strike Rate</th>
+                  
+                    
+                 
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="player : ${listplayers}">
+                    <td th:text="${player.playerName} +' '+ ${player.lastName}" ></td>
+                    <td th:text="${player.playerAge}"></td>
+                    <td th:text="${player.country}"></td>
+                 <td th:text="${player.role}"></td>
+                    
+                     <td th:text="${player.playerBowlingSytle}"></td>
+                    <td th:text="${player.playerBowlingInnings}"></td>
+                   <td th:text="${player.bowlingWickets}"></td>
+                
+                         <td th:text="${player.bowlingSR}"></td>
+                    
+                         
+                         
+                    
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
