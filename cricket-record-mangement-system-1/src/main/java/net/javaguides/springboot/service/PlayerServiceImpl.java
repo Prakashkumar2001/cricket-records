@@ -74,6 +74,26 @@ public  class PlayerServiceImpl implements PlayerService {
 			
 			player.setBattingHighest(irun);
 		}
+
+          
+              int b100=player.getBatting100s();
+		int b50=player.getBatting50s();
+		int h=0;
+		int p=0;
+		if(irun>99 && irun<200) {
+			h=b100+1;
+			player.setBatting100s(h);
+			
+		}
+		else if(irun>49 && irun<100) {
+			p=b50+1;
+			player.setBatting50s(p);
+			
+		}
+
+
+
+		
 		
 		int out=in-no;
 		if(out==0) {
